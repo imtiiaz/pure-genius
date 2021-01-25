@@ -113,7 +113,7 @@ button:focus {
 
 .container {
     background: #2d2449;
-    margin: 80px auto;
+    margin: 30px auto;
     border-radius: 10px;
     position: relative;
 }
@@ -315,6 +315,35 @@ button:focus {
 
 /*-----slider----*/
 
+
+::-webkit-input-placeholder {
+    text-transform: capitalize;
+    color: #4f4a77;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+::-moz-placeholder {
+    text-transform: capitalize;
+    color: #4f4a77;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+:-ms-input-placeholder {
+    text-transform: capitalize;
+    color: #4f4a77;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+:-moz-placeholder {
+    text-transform: capitalize;
+    color: #4f4a77;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 h3 {
     font-size: 16px;
     font-weight: 500;
@@ -349,6 +378,7 @@ p {
 }
 
 .slider_box .text {
+    position: relative;
     padding: 0 0 0 20px;
 }
 
@@ -373,7 +403,105 @@ p {
     margin-left: 10px;
 }
 
-.slider.slick-slider ul {
+.icon button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.icon button i {
+    font-size: 14px;
+    color: #504b78;
+    margin-left: 10px;
+}
+
+.comment {
+    display: none;
+}
+
+.pre_img,
+.pre_text {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.pre_img img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.pre_text {
+    padding-left: 10px;
+}
+
+.pre_text h5 {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.pre_text h5 span {
+    font-size: 13px;
+    color: #595866;
+    padding-left: 5px;
+}
+
+.pre_text p {
+    font-size: 13px;
+}
+
+.pre_text a {
+    margin-right: 5px;
+    font-size: 12px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.dot_dot {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    z-index: 9999;
+}
+
+.dot_dot ul > li {
+    position: relative;
+}
+
+.dot_dot ul > li:hover ul {
+    display: block;
+}
+
+.dot_dot ul > li i {
+    color: #fff;
+    font-size: 16px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.dot_dot ul > li > ul {
+    position: absolute;
+    width: 80px;
+    left: -60px;
+    top: 22px;
+    z-index: 999;
+    background: #fff;
+    padding: 5px 8px;
+    border-radius: 10px;
+    display: none;
+
+}
+
+.dot_dot ul > li ul li a {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #2d2449;
+}
+
+
+.slider.slick-slider ul.slick-dots {
     position: absolute;
     left: 50%;
     bottom: -25px;
@@ -662,7 +790,8 @@ i.fas.fa-chevron-right.slick-arrow {
     .big_banner > img {
         height: 220px;
     }
-    .big_banner img:nth-child(2){
+
+    .big_banner img:nth-child(2) {
         height: 110px;
     }
 
