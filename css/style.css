@@ -75,33 +75,35 @@ button:focus {
     overflow-x: hidden;
 }
 
-::-webkit-input-placeholder {
+/*
+.search::-webkit-input-placeholder {
     text-transform: capitalize;
     color: #4f4a77;
     font-size: 30px;
     font-weight: 700;
 }
 
-::-moz-placeholder {
+.search::-moz-placeholder {
     text-transform: capitalize;
     color: #4f4a77;
     font-size: 30px;
     font-weight: 700;
 }
 
-:-ms-input-placeholder {
+.search:-ms-input-placeholder {
     text-transform: capitalize;
     color: #4f4a77;
     font-size: 30px;
     font-weight: 700;
 }
 
-:-moz-placeholder {
+.search:-moz-placeholder {
     text-transform: capitalize;
     color: #4f4a77;
     font-size: 30px;
     font-weight: 700;
 }
+*/
 
 .slick-slide:focus {
     outline: 0;
@@ -184,8 +186,6 @@ button:focus {
 }
 
 .form-control {
-    font-size: 30px;
-    font-weight: 700;
     color: #4f4a77;
     line-height: 1;
     background: transparent;
@@ -193,7 +193,12 @@ button:focus {
     border-left: 0;
     border-right: 0;
     border-bottom: 2px solid #4f4a77;
-    padding: 10px 10px;
+    padding: 10px 20px;
+}
+
+.search .form-control {
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .form-control:focus {
@@ -286,11 +291,44 @@ button:focus {
 
 
 /*-----banner---*/
+
 .banner {
     padding-top: 30px;
     padding-bottom: 35px;
     padding-left: 100px;
+    position: relative;
 }
+
+/*banner top/left*/
+
+.banner_top a,
+.banner_left a {
+    font-size: 14px;
+    color: #615a81;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-right: 20px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.banner_top a i,
+.banner_left a i {
+    margin-right: 5px;
+}
+
+.banner_left {
+    position: absolute;
+    left: 55px;
+    top: 100px;
+}
+
+.banner_left a {
+    display: block;
+}
+
+/*big banner*/
 
 .big_banner {
     position: relative;
@@ -301,48 +339,46 @@ button:focus {
 }
 
 .big_banner > img {
-    height: 345px;
+    height: 320px;
 }
 
 .big_banner img:nth-child(2) {
     position: absolute;
-    bottom: -25px;
+    bottom: -12px;
     left: -25px;
     border: 10px solid #2d2449;
     border-radius: 20px;
     height: 150px;
 }
 
+/*banner bottom*/
+.banner_bottom {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.banner_bottom a {
+    font-size: 13px;
+    color: #fff;
+    background: #0361cd;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.banner_bottom a:nth-child(2) {
+    background: #332e5b;
+}
+
+.banner_bottom a i {
+    font-size: 12px;
+    margin: 0 5px;
+}
+
 /*-----slider----*/
-
-
-::-webkit-input-placeholder {
-    text-transform: capitalize;
-    color: #4f4a77;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-::-moz-placeholder {
-    text-transform: capitalize;
-    color: #4f4a77;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-:-ms-input-placeholder {
-    text-transform: capitalize;
-    color: #4f4a77;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-:-moz-placeholder {
-    text-transform: capitalize;
-    color: #4f4a77;
-    font-size: 12px;
-    font-weight: 600;
-}
 
 h3 {
     font-size: 16px;
@@ -403,7 +439,7 @@ p {
     margin-left: 10px;
 }
 
-.icon button {
+.text button {
     background: transparent;
     border: 0;
     padding: 0;
@@ -411,14 +447,21 @@ p {
     cursor: pointer;
 }
 
-.icon button i {
+.text button i {
     font-size: 14px;
     color: #504b78;
     margin-left: 10px;
 }
 
 .comment {
-    display: none;
+    position: relative;
+    padding-top: 5px;
+}
+
+.comment button {
+    position: absolute;
+    right: 0;
+    top: 12px;
 }
 
 .pre_img,
@@ -644,6 +687,41 @@ i.fas.fa-chevron-right.slick-arrow {
 /*---------------------------------------------------
 ---------------------responsive css---------------------*/
 
+
+@media screen and (max-width:1199px) {
+    .banner {
+        padding-left: 0px;
+        padding-top: 45px;
+    }
+
+    .banner_top {
+        position: absolute;
+        left: 70px;
+        top: 0;
+    }
+
+    .banner_left {
+        left: 25px;
+        top: 75px;
+    }
+
+    .slider {
+        margin-top: 60px;
+    }
+
+    .selection {
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (min-width:767px) and (max-width:991px) {
+    .banner_left {
+        left: 12px;
+        top: 82px;
+    }
+}
+
 @media screen and (max-width:767px) {
     .row.pl-30 {
         padding: 0 30px
@@ -672,6 +750,31 @@ i.fas.fa-chevron-right.slick-arrow {
         border-bottom-left-radius: 0;
     }
 
+    .banner {
+        padding-top: 30px;
+    }
+
+    .banner_top {
+        position: static;
+        text-align: center;
+    }
+
+    .banner_top a,
+    .banner_left a {
+        font-size: 13px;
+    }
+
+    .banner_left {
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .banner_left a {
+        display: inline-block;
+    }
+
     .side_bar {
         border-top-left-radius: 10px;
     }
@@ -695,21 +798,6 @@ i.fas.fa-chevron-right.slick-arrow {
     }
 }
 
-@media screen and (max-width:1199px) {
-    .banner {
-        padding-left: 0px;
-    }
-
-    .slider {
-        margin-top: 50px;
-    }
-
-    .selection {
-        padding-left: 0;
-    }
-
-}
-
 @media screen and (max-width:575px) {
     .container {
         margin: 0;
@@ -731,6 +819,40 @@ i.fas.fa-chevron-right.slick-arrow {
         line-height: 40px;
         text-align: center;
         background: #332e59;
+    }
+
+    .banner_top a {
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    .banner_bottom {
+        bottom: -80px;
+    }
+
+    .banner_bottom a {
+        display: block;
+    }
+
+    .slider {
+        margin-top: 100px;
+    }
+
+    .slider_box .img,
+    .slider_box .text {
+        display: block;
+    }
+
+    .slider_box .img {
+        text-align: -webkit-center;
+    }
+
+    .slider_box .text {
+        padding-top: 15px;
+    }
+
+    .dot_dot {
+        top: 10px;
     }
 
     .side_bar a img {
@@ -765,7 +887,7 @@ i.fas.fa-chevron-right.slick-arrow {
         font-size: 16px;
     }
 
-    .form-control {
+    .search .form-control {
         font-size: 15px;
         padding-right: 20px;
     }
